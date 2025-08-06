@@ -1,0 +1,433 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Premium XP Inc. Design System - Institutional Black Glassmorphism */
+
+@layer base {
+  :root {
+    /* Elegant Glass Background with Geometric Pattern */
+    --background: 0 0% 0%;
+    --background-gradient: radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.08) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(128, 128, 128, 0.06) 0%, transparent 50%), linear-gradient(135deg, hsl(0 0% 2%) 0%, hsl(0 0% 5%) 25%, hsl(0 0% 3%) 50%, hsl(0 0% 8%) 75%, hsl(0 0% 0%) 100%);
+    --background-overlay: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"), linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(0, 0, 0, 0.95) 50%, rgba(255, 255, 255, 0.01) 100%);
+    --foreground: 0 0% 100%;
+
+    /* XP Premium Glass Cards */
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 100%;
+
+    /* Popovers */
+    --popover: 220 27% 10%;
+    --popover-foreground: 0 0% 100%;
+
+    /* Primary - Modern Blue */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Glass Dark */
+    --secondary: 220 27% 10%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Muted - Subtle Gray */
+    --muted: 220 27% 15%;
+    --muted-foreground: 0 0% 65%;
+
+    /* Accent - Premium Purple */
+    --accent: 270 95% 65%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Success - Clean Green */
+    --success: 142 76% 55%;
+    --success-foreground: 0 0% 100%;
+
+    /* Warning - Bright Orange */
+    --warning: 38 92% 65%;
+    --warning-foreground: 0 0% 0%;
+
+    /* Destructive - Clean Red */
+    --destructive: 0 84% 65%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders & Inputs */
+    --border: 0 0% 100% / 0.1;
+    --input: 220 27% 15%;
+    --ring: 217 91% 60%;
+
+    /* XP Sidebar - Pure Black */
+    --sidebar-background: 0 0% 0%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 5%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 100% / 0.05;
+    --sidebar-ring: 217 91% 60%;
+
+    /* Enhanced Floating Glass Effects & Gradients */
+    --glass-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 50%, rgba(0, 0, 0, 0.4) 100%);
+    --glass-border: 0 0% 100% / 0.08;
+    --glass-border-hover: 0 0% 100% / 0.25;
+    --glass-glow: 0 0% 100% / 0.5;
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(270 95% 65%));
+    --gradient-card-floating: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.06) 25%, rgba(0, 0, 0, 0.3) 50%, rgba(255, 255, 255, 0.04) 75%, rgba(255, 255, 255, 0.08) 100%);
+    --shadow-floating: 0 30px 80px rgba(0, 0, 0, 0.6), 0 10px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    --shadow-floating-hover: 0 40px 120px rgba(0, 0, 0, 0.8), 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 60px rgba(255, 255, 255, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    --shadow-glow: 0 0 40px hsl(217 91% 60% / 0.3);
+
+    /* Modern Chart Gradients */
+    --chart-gradient-primary: linear-gradient(180deg, hsl(217 91% 60% / 0.3), hsl(217 91% 60% / 0.05));
+    --chart-gradient-accent: linear-gradient(180deg, hsl(270 95% 65% / 0.3), hsl(270 95% 65% / 0.05));
+    --chart-gradient-success: linear-gradient(180deg, hsl(142 76% 55% / 0.3), hsl(142 76% 55% / 0.05));
+    --chart-bar-gradient: linear-gradient(180deg, hsl(217 91% 70%), hsl(217 91% 50%));
+    --chart-bar-gradient-hover: linear-gradient(180deg, hsl(217 91% 75%), hsl(217 91% 55%));
+    --chart-glow-primary: 0 0 30px hsl(217 91% 60% / 0.4);
+    --chart-glow-accent: 0 0 30px hsl(270 95% 65% / 0.4);
+
+    /* Premium Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 1rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply text-foreground overflow-x-hidden;
+    background: var(--background-gradient);
+    position: relative;
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Inter', sans-serif;
+    font-weight: 500;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--background-overlay);
+    pointer-events: none;
+    z-index: -1;
+  }
+}
+
+@layer components {
+  /* True Glassmorphism Card Effect */
+  .glass-card {
+    @apply relative overflow-hidden rounded-2xl;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1),
+      inset 0 -1px 0 rgba(255, 255, 255, 0.05);
+    transition: var(--transition-smooth);
+  }
+
+  /* Enhanced Glass Card with Floating Hover Effects */
+  .glass-card-hover {
+    @apply glass-card cursor-pointer;
+  }
+  
+  .glass-card-hover:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-4px);
+    box-shadow: 
+      0 12px 40px rgba(0, 0, 0, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.15),
+      inset 0 -1px 0 rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(24px);
+  }
+
+  /* Premium Floating KPI Card */
+  .xp-kpi-card {
+    @apply glass-card-hover;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+  }
+  
+  .xp-kpi-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 
+      0 16px 48px rgba(0, 0, 0, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.15),
+      inset 0 -1px 0 rgba(255, 255, 255, 0.08);
+  }
+
+  /* Premium Buttons */
+  .btn-glass {
+    @apply relative overflow-hidden rounded-xl px-6 py-3 font-medium text-foreground;
+    background: var(--gradient-card);
+    border: 1px solid hsl(var(--glass-border));
+    backdrop-filter: blur(10px);
+    transition: var(--transition-smooth);
+  }
+  
+  .btn-glass:hover {
+    border-color: hsl(var(--glass-glow));
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+    transform: translateY(-1px);
+  }
+
+  /* Primary Glass Button */
+  .btn-primary-glass {
+    @apply btn-glass;
+    background: var(--gradient-primary);
+    border-color: hsl(var(--primary));
+  }
+
+  /* KPI Card Premium */
+  .kpi-card {
+    @apply glass-card-hover p-8;
+  }
+
+  /* Sidebar Glass */
+  .sidebar-glass {
+    @apply relative;
+    background: var(--gradient-card);
+    border-right: 1px solid hsl(var(--glass-border));
+    backdrop-filter: blur(20px);
+  }
+
+  /* Text Effects */
+  .text-glow {
+    text-shadow: 0 0 20px hsl(var(--primary) / 0.5);
+  }
+
+  /* Premium Animations */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.4s ease-out forwards;
+  }
+
+  .sentiment-slider-progress {
+    position: relative;
+  }
+  .sentiment-slider-progress::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    height: 180%;
+    background: inherit;
+    filter: blur(6px);
+    z-index: -1;
+    opacity: 0.6;
+  }
+}
+
+@layer utilities {
+  /* Ultra Minimal Glassmorphism */
+  .glass-bg {
+    background: hsl(var(--glass-bg));
+    backdrop-filter: blur(10px);
+  }
+
+  .glass-border {
+    border: 1px solid hsl(var(--glass-border));
+  }
+
+  /* Subtle Text Effects */
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Minimal Glow */
+  .glow-subtle {
+    box-shadow: var(--shadow-subtle);
+  }
+
+  /* Candidates Page Specific */
+  .candidate-grid-animation {
+    animation: fadeInStagger 0.6s ease-out forwards;
+  }
+}
+
+/* Premium Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInStagger {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+  }
+  100% {
+    box-shadow: 0 0 40px hsl(var(--primary) / 0.6);
+  }
+}
+
+/* Slide animations for sidebar */
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Enhanced animation classes */
+.animate-slide-in-right {
+  animation: slide-in-right 0.4s ease-out forwards;
+}
+
+/* Minimalist Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Mapa Floating Effect - Estilo Referência */
+.card-map-wrapper {
+  position: relative;
+  overflow: visible !important;
+}
+
+.card-map-wrapper .leaflet-container {
+  border-radius: 24px;
+  background: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  filter: 
+    drop-shadow(0 20px 60px rgba(0, 0, 0, 0.4))
+    drop-shadow(0 8px 24px rgba(14, 165, 233, 0.15));
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform: translateY(0);
+}
+
+.card-map-wrapper:hover .leaflet-container {
+  transform: translateY(-8px);
+  filter: 
+    drop-shadow(0 32px 80px rgba(0, 0, 0, 0.5))
+    drop-shadow(0 12px 32px rgba(14, 165, 233, 0.25));
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
