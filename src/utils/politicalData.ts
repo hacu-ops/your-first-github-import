@@ -136,9 +136,9 @@ export const generatePoliticalData = (period: string, region: string = "all"): P
       // ...
     ],
     alerts: [
-      { type: 'critical', message: `Queda na aprovação em ${region === 'all' ? 'Londrina' : region}`, value: -8, trend: -12 },
-      { type: 'warning', message: 'Aumento de reclamações sobre saúde', value: 28, trend: 15 },
-      { type: 'info', message: 'Crescimento no engajamento jovem', value: 34, trend: 22 },
+      { type: 'critical' as const, message: `Queda na aprovação em ${region === 'all' ? 'Londrina' : region}`, value: -8, trend: -12 },
+      { type: 'warning' as const, message: 'Aumento de reclamações sobre saúde', value: 28, trend: 15 },
+      { type: 'info' as const, message: 'Crescimento no engajamento jovem', value: 34, trend: 22 },
     ].filter(() => region === 'all' || Math.random() > 0.3), // Simulate fewer alerts for specific regions
     proposals: [
       { title: `Hospital Regional de ${region === 'all' ? 'Londrina' : region}`, support: 82, category: 'Saúde' },

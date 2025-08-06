@@ -1,3 +1,4 @@
+
 import { useNavigate } from "react-router-dom";
 import Sidebar from "@/components/Sidebar";
 import { useSidebarState } from "@/hooks/useSidebarState";
@@ -53,7 +54,7 @@ const VisaoMacro = () => {
               </CardContent>
             </Card>
             
-            <GeneralSentimentCard period="30d" />
+            <GeneralSentimentCard period="30d" region="all" />
             <RegionalTopics />
             <div className="lg:col-span-2">
               <RegionsAnalysis />
